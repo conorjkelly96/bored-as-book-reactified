@@ -1,38 +1,237 @@
-.App {
+/* coolers */
+:root {
+  --flickr-pink: #f72585ff;
+  --byzantine: #b5179eff;
+  --purple: #7209b7ff;
+  --purple-2: #560badff;
+  --trypan-blue: #480ca8ff;
+  --trypan-blue-2: #3a0ca3ff;
+  --persian-blue: #3f37c9ff;
+  --ultramarine-blue: #4361eeff;
+  --dodger-blue: #4895efff;
+  --vivid-sky-blue: #4cc9f0ff;
+  --background-overlay: linear-gradient(
+    to top,
+    rgb(20, 20, 20, 0.7),
+    rgba(133, 133, 133, 0.2)
+  );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+}
+
+#main-page {
+  background-image: var(--background-overlay);
+  background-size: 1000px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#about-us {
+  background-image: var(--background-overlay);
+  background-size: 1000px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#my-activities {
+  background-image: var(--background-overlay);
+  background-size: 1000px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#search-results {
+  background-image: var(--background-overlay);
+  background-size: 1000px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.book-logo {
+  width: 25%;
+  height: auto;
+}
+
+main {
+  min-height: 80vh;
+}
+
+.logo {
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-item {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#tile {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttons-container {
+  margin: 20px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.no-border {
+  border: none;
+}
+
+.alert {
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+
+.alert-success {
+  background-color: rgba(0, 209, 178, 0.6);
+}
+
+.alert-danger {
+  background-color: rgba(241, 70, 104, 0.6);
+}
+
+.category-btn {
+  margin-top: 10px;
+  background-color: coral;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.category-btn:hover {
+  color: var(--flickr-pink);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* icon for activity buttons */
+.pay-icon {
+  color: yellow;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.form-input {
+  width: 264px;
+}
+
+.list-item {
+  display: block;
+  float: left;
+  clear: left;
+  margin: 5px;
+}
+
+.tile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title-text {
+  text-align: center;
+  margin: auto !important;
+  margin-top: 80px !important;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Overwriting BULMA padding on input div */
+.input-div {
+  padding: 0px;
+}
+
+/* overwriting activity text  */
+.activity-text {
+  font-size: 20px;
+}
+
+.activity-notification {
+  font-style: italic;
+}
+
+/* CSS Styling for the Cards on My Activity page */
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-category {
+  padding: 20px;
+  text-align: center;
+}
+
+.category-background {
+  background-color: rgba(0, 209, 178, 0.6);
+}
+
+.activity-card {
+  width: 20rem;
+  margin: 20px;
+}
+
+.pay-icon {
+  color: yellow;
+  background-color: black;
+  border-radius: 100%;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+/* For Mobile View Ports */
+@media only screen and (max-width: 768px) {
+  #search-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  .list-item {
+    width: 240px;
+  }
+  .tile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .form-container {
+    flex-direction: column;
+  }
+
+  .book-logo {
+    width: 10%;
+    height: auto;
   }
 }
